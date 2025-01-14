@@ -1,4 +1,10 @@
-[gd_scene format=3 uid="uid://bia5bf53ej58"]
+[gd_scene load_steps=5 format=3 uid="uid://bia5bf53ej58"]
+
+[ext_resource type="Texture2D" uid="uid://bkan1cd1whriu" path="res://Assets/Art/UI/Banners/Banner_Connection_Left.png" id="1_j51nl"]
+[ext_resource type="Texture2D" uid="uid://ci8m4d65f3phg" path="res://Assets/Art/UI/Banners/Carved_9Slides.png" id="2_dnqok"]
+[ext_resource type="Texture2D" uid="uid://dxcykq1mk4mct" path="res://Assets/Art/UI/Banners/Banner_Connection_Right.png" id="3_e3s1a"]
+
+[sub_resource type="Theme" id="Theme_rvrdw"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -7,3 +13,36 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -292.0
+offset_top = -96.0
+offset_right = 292.0
+offset_bottom = 96.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_j51nl")
+
+[node name="TextureRect2" type="TextureRect" parent="GridContainer/HBoxContainer"]
+layout_mode = 2
+tooltip_text = "dwdw"
+theme = SubResource("Theme_rvrdw")
+texture = ExtResource("2_dnqok")
+
+[node name="TextureRect3" type="TextureRect" parent="GridContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_e3s1a")

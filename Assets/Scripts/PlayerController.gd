@@ -33,6 +33,7 @@ func CheckHurtBox():
 		for mob in collidingEnemies:
 			if not mob.isAttacking and not mob.isHurt:
 				health -= mob.GetDamageValue()
+				%HealthBar.value = health
 				mob.Attack()
 				print_debug("player health: " + str(health))
 			if health <= 0.0:

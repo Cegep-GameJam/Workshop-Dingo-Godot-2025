@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://ngxfufo5rglu"]
 
 [ext_resource type="Texture2D" uid="uid://bmi0atxke5dxv" path="res://Assets/Art/Sprites/enemy1.png" id="1_53qen"]
-[ext_resource type="Script" path="res://Assets/Scenes/EnemyKnightAnimator.gd" id="1_hhbta"]
+[ext_resource type="Script" path="res://Assets/Scripts/EnemyKnightAnimator.gd" id="1_hhbta"]
 
 [sub_resource type="Animation" id="Animation_lkfg8"]
 length = 0.001

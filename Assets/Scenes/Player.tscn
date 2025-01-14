@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://oxy5tfaotf6m"]
+[gd_scene load_steps=9 format=3 uid="uid://oxy5tfaotf6m"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/PlayerController.gd" id="1_6ri7o"]
 [ext_resource type="PackedScene" uid="uid://2xwi8txxjfjn" path="res://Assets/Scenes/PlayerSprite.tscn" id="1_piqim"]
 [ext_resource type="PackedScene" uid="uid://b4kdkamccmyvd" path="res://Assets/Scenes/Aim.tscn" id="3_ei8ae"]
+[ext_resource type="Texture2D" uid="uid://dq25dp1rr0og4" path="res://Assets/Art/UI/Buttons/Button_Hover_3Slides.png" id="4_4flvv"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v6q21"]
 radius = 25.0
@@ -10,6 +11,22 @@ height = 64.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_f44id"]
 radius = 22.0227
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mr8bf"]
+texture = ExtResource("4_4flvv")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_msfrs"]
+bg_color = Color(0.54902, 0.764706, 0.768627, 1)
+border_width_left = 9
+border_width_top = 4
+border_width_right = 9
+border_width_bottom = 15
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+corner_detail = 6
 
 [node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("playerSprite")]
 script = ExtResource("1_6ri7o")
@@ -36,3 +53,14 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DamageBox"]
 shape = SubResource("CircleShape2D_f44id")
 debug_color = Color(0.890319, 0.25588, 0.516241, 0.42)
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+offset_left = -58.0
+offset_top = -81.0
+offset_right = 57.0
+offset_bottom = -41.0
+theme_override_styles/background = SubResource("StyleBoxTexture_mr8bf")
+theme_override_styles/fill = SubResource("StyleBoxFlat_msfrs")
+value = 100.0
+show_percentage = false

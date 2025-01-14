@@ -11,3 +11,7 @@ func SpawnKnight():
 func _on_knight_spawn_timer_timeout() -> void:
 	print_debug("spawn a knight")
 	SpawnKnight()
+
+
+func _on_player_game_over() -> void:
+	get_tree().paused = true

@@ -14,4 +14,6 @@ func _on_knight_spawn_timer_timeout() -> void:
 
 
 func _on_player_game_over() -> void:
+	await get_tree().create_timer(2.0).timeout
 	get_tree().paused = true
+	get_tree().change_scene_to_file("res://Assets/Scenes/MainMenu.tscn")

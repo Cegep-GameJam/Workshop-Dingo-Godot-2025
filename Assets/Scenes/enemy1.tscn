@@ -1,10 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://24sxb18vx53i"]
+[gd_scene load_steps=5 format=3 uid="uid://24sxb18vx53i"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/EnemyKnightController.gd" id="1_ir2qj"]
 [ext_resource type="PackedScene" uid="uid://ngxfufo5rglu" path="res://Assets/Scenes/enemy_visuals.tscn" id="1_prh4v"]
+[ext_resource type="AudioStream" uid="uid://dlci0wvwqpyyn" path="res://Assets/Audio/Audio/sound_effects/impactSoft_heavy_000.ogg" id="3_bpskq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5k3y8"]
-radius = 76.3217
+radius = 40.1123
 
 [node name="Enemy1" type="CharacterBody2D" node_paths=PackedStringArray("enemySprite")]
 collision_layer = 2
@@ -16,3 +17,9 @@ enemySprite = NodePath("EnemyVisuals")
 shape = SubResource("CircleShape2D_5k3y8")
 
 [node name="EnemyVisuals" parent="." instance=ExtResource("1_prh4v")]
+
+[node name="Audio" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("3_bpskq")
+volume_db = -5.704
+pitch_scale = 2.8

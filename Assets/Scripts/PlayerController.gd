@@ -49,7 +49,7 @@ func _ready():
 
 func _physics_process(delta):
 	if health > 0 and not isReloading:
-		direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+		direction = Input.get_vector("left", "right", "up", "down")
 		velocity = direction * speed 
 		CheckIfReload()
 		CheckIsMoving()
@@ -58,7 +58,7 @@ func _physics_process(delta):
 		CheckHurtBox()
 
 func CheckDirection(dir) -> void:
-	var directionInput = Input.get_axis("ui_left", "ui_right")
+	var directionInput = Input.get_axis("left", "right")
 	if directionInput < 0:
 		%PlayerSprite.flip_h = true
 	if directionInput > 0:

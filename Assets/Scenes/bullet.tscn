@@ -1,8 +1,9 @@
-[gd_scene load_steps=21 format=3 uid="uid://cj4cvlpgodpti"]
+[gd_scene load_steps=22 format=3 uid="uid://cj4cvlpgodpti"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/PlayerProjectile.gd" id="1_ul6ky"]
 [ext_resource type="Texture2D" uid="uid://bxqkrealr7d71" path="res://Assets/Art/Sprites/Dynamite.png" id="1_x0qew"]
 [ext_resource type="Texture2D" uid="uid://dfda3jv1jqd1r" path="res://Assets/Art/Sprites/Explosions.png" id="3_avipf"]
+[ext_resource type="AudioStream" uid="uid://cy26xtfm5psf0" path="res://Assets/Audio/Audio/sound_effects/impactPlate_heavy_002.ogg" id="4_imnwl"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_78dnn"]
 
@@ -129,12 +130,17 @@ collision_layer = 6
 collision_mask = 6
 script = ExtResource("1_ul6ky")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="Collider" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_78dnn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_6lsed")
-frame_progress = 0.188282
+frame_progress = 0.567008
+
+[node name="Audio" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("4_imnwl")
+volume_db = -3.072
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

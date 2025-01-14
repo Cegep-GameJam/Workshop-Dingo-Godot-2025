@@ -36,6 +36,7 @@ func FlipSprite():
 func take_damage():
 	if health == 0:
 		isDead = true
+		%Audio.play()
 		enemySprite.PlayDeadAnimation()
 		await enemySprite.getAnimator().animation_finished
 		queue_free()

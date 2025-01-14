@@ -1,10 +1,56 @@
-[gd_scene load_steps=5 format=3 uid="uid://bia5bf53ej58"]
+[gd_scene load_steps=18 format=3 uid="uid://bia5bf53ej58"]
 
-[ext_resource type="Texture2D" uid="uid://bkan1cd1whriu" path="res://Assets/Art/UI/Banners/Banner_Connection_Left.png" id="1_j51nl"]
-[ext_resource type="Texture2D" uid="uid://ci8m4d65f3phg" path="res://Assets/Art/UI/Banners/Carved_9Slides.png" id="2_dnqok"]
-[ext_resource type="Texture2D" uid="uid://dxcykq1mk4mct" path="res://Assets/Art/UI/Banners/Banner_Connection_Right.png" id="3_e3s1a"]
+[ext_resource type="Texture2D" uid="uid://b03ndps3f4gmv" path="res://Assets/Art/UI/Buttons/Button_Blue_3Slides_Pressed.png" id="1_bsg77"]
+[ext_resource type="Texture2D" uid="uid://brgv8fuag64wk" path="res://Assets/Art/UI/Buttons/Button_Blue_3Slides.png" id="1_ih4tr"]
+[ext_resource type="Texture2D" uid="uid://ch6chgajyu00r" path="res://Assets/Art/UI/Pointers/04.png" id="2_87ejo"]
+[ext_resource type="Texture2D" uid="uid://byewuy5t8jivu" path="res://Assets/Art/UI/Buttons/Button_Red_3Slides.png" id="3_6ba0g"]
+[ext_resource type="Texture2D" uid="uid://dx1bj4ae0h121" path="res://Assets/Art/UI/Buttons/Button_Red_3Slides_Pressed.png" id="3_jnaga"]
+[ext_resource type="Texture2D" uid="uid://d23nckp3rs6jy" path="res://Assets/Art/UI/Icons/Regular_01.png" id="4_ps5kn"]
+[ext_resource type="Texture2D" uid="uid://b25hhm3fq77k4" path="res://Assets/Art/UI/backgroundCastles.png" id="7_o6pyo"]
+[ext_resource type="Texture2D" uid="uid://bddwox22w1kvb" path="res://Assets/Art/UI/DingoLogo.png" id="8_ih4e5"]
+[ext_resource type="Texture2D" uid="uid://lfgsnvae6j5" path="res://Assets/Art/UI/WorkshopLogo.png" id="9_73lab"]
+[ext_resource type="AudioStream" uid="uid://bxolr3q0af6xe" path="res://Assets/Audio/Audio/16-Bit Starter Pack/Waiting.ogg" id="10_berh8"]
 
-[sub_resource type="Theme" id="Theme_rvrdw"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pkkk1"]
+texture = ExtResource("7_o6pyo")
+expand_margin_left = 190.0
+expand_margin_right = 260.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_faqtg"]
+texture = ExtResource("1_bsg77")
+expand_margin_left = 70.0
+expand_margin_right = 100.0
+expand_margin_bottom = 50.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3hq14"]
+texture = ExtResource("1_bsg77")
+expand_margin_left = 70.0
+expand_margin_right = 100.0
+expand_margin_bottom = 50.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i7f35"]
+texture = ExtResource("1_ih4tr")
+expand_margin_left = 70.0
+expand_margin_right = 100.0
+expand_margin_bottom = 50.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s1jrm"]
+texture = ExtResource("3_jnaga")
+expand_margin_left = 70.0
+expand_margin_right = 100.0
+expand_margin_bottom = 50.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5jlfg"]
+texture = ExtResource("3_jnaga")
+expand_margin_left = 70.0
+expand_margin_right = 100.0
+expand_margin_bottom = 50.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jr1cf"]
+texture = ExtResource("3_6ba0g")
+expand_margin_left = 70.0
+expand_margin_right = 100.0
+expand_margin_bottom = 50.0
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -13,36 +59,90 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.996302, 0.998311)
+size_flags_horizontal = 4
 
-[node name="GridContainer" type="GridContainer" parent="."]
+[node name="PanelContainer" type="PanelContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -292.0
-offset_top = -96.0
-offset_right = 292.0
-offset_bottom = 96.0
+offset_left = -512.0
+offset_top = -512.0
+offset_right = 512.0
+offset_bottom = 512.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_pkkk1")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="GridContainer"]
-layout_mode = 2
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = -68.2524
+offset_top = -24.0406
+offset_right = -28.2524
+offset_bottom = 15.9594
+scale = Vector2(35.4072, 8.45259)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -292.0
+offset_top = -192.0
+offset_right = 292.0
+grow_horizontal = 2
+grow_vertical = 0
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_constants/separation = 250
 
-[node name="TextureRect" type="TextureRect" parent="GridContainer/HBoxContainer"]
+[node name="Button" type="Button" parent="HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("1_j51nl")
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/hover = SubResource("StyleBoxTexture_faqtg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_3hq14")
+theme_override_styles/normal = SubResource("StyleBoxTexture_i7f35")
+text = "Start Game
+"
+icon = ExtResource("2_87ejo")
 
-[node name="TextureRect2" type="TextureRect" parent="GridContainer/HBoxContainer"]
+[node name="Button2" type="Button" parent="HBoxContainer"]
 layout_mode = 2
-tooltip_text = "dwdw"
-theme = SubResource("Theme_rvrdw")
-texture = ExtResource("2_dnqok")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/hover = SubResource("StyleBoxTexture_s1jrm")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_5jlfg")
+theme_override_styles/normal = SubResource("StyleBoxTexture_jr1cf")
+text = "Quit Game"
+icon = ExtResource("4_ps5kn")
 
-[node name="TextureRect3" type="TextureRect" parent="GridContainer/HBoxContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+layout_mode = 1
+offset_right = 2880.0
+offset_bottom = 724.0
+scale = Vector2(0.431612, 0.428957)
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer2"]
 layout_mode = 2
-texture = ExtResource("3_e3s1a")
+texture = ExtResource("8_ih4e5")
+expand_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("9_73lab")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_berh8")
+autoplay = true
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0

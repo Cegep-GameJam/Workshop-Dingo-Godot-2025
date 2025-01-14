@@ -21,7 +21,8 @@ func _physics_process(delta):
 
 func _on_body_entered(body: Node2D) -> void:
 	%AnimatedSprite2D.play("explode")
-	if body.has_method("take_damage"):
+	%Audio.play()
+	if body.has_method("take_damage"):	
 		body.take_damage()
 	## wait until the explosion is finished before removing the gameobject
 	await %AnimatedSprite2D.animation_finished	

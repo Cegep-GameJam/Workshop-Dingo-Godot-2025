@@ -424,6 +424,7 @@ tile_map_data = PackedByteArray("AADZ/wIAAAAAAAEAAADZ/wEAAAAAAAAAAADa/wEAAAABAAA
 tile_set = SubResource("TileSet_nxudu")
 
 [node name="Player" parent="." instance=ExtResource("5_06c6d")]
+unique_name_in_owner = true
 position = Vector2(-357, 469)
 
 [node name="KnightSpawnArea" type="Path2D" parent="."]
@@ -443,7 +444,6 @@ autostart = true
 stream = ExtResource("7_52ok2")
 autoplay = true
 
-[connection signal="GameOver" from="Player" to="." method="_on_player_game_over"]
 [connection signal="timeout" from="KnightSpawnTimer" to="." method="_on_knight_spawn_timer_timeout"]
 
 [editable path="Player"]

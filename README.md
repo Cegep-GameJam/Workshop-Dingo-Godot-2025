@@ -7,3 +7,4 @@ Assets
 - Impact Sounds (1.0) by Kenney [+] https://kenney.nl/assets/impact-sounds 
 - 16-Bit Starter Pack Royalty Free Music  [+] https://bit-by-bit-sound.itch.io/16-bit-starter-pack
 - Background Elements Redux by Kenney [+] https://kenney.nl/assets/background-elements-redux
+- UI Pack by Kenney [+] https://kenney.nl/assets/ui-pack

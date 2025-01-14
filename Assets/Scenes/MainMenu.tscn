@@ -1,7 +1,7 @@
 [gd_scene load_steps=19 format=3 uid="uid://bia5bf53ej58"]
 
+[ext_resource type="Script" path="res://Assets/Scripts/MainMenu.gd" id="1_4rxhc"]
 [ext_resource type="Texture2D" uid="uid://b03ndps3f4gmv" path="res://Assets/Art/UI/Buttons/Button_Blue_3Slides_Pressed.png" id="1_bsg77"]
-[ext_resource type="Script" path="res://Assets/Scenes/MainMenu.gd" id="1_c647t"]
 [ext_resource type="Texture2D" uid="uid://brgv8fuag64wk" path="res://Assets/Art/UI/Buttons/Button_Blue_3Slides.png" id="1_ih4tr"]
 [ext_resource type="Texture2D" uid="uid://ch6chgajyu00r" path="res://Assets/Art/UI/Pointers/04.png" id="2_87ejo"]
 [ext_resource type="Texture2D" uid="uid://byewuy5t8jivu" path="res://Assets/Art/UI/Buttons/Button_Red_3Slides.png" id="3_6ba0g"]
@@ -62,7 +62,7 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.996302, 0.998311)
 size_flags_horizontal = 4
-script = ExtResource("1_c647t")
+script = ExtResource("1_4rxhc")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 layout_mode = 1

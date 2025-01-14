@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://oxy5tfaotf6m"]
+[gd_scene load_steps=10 format=3 uid="uid://oxy5tfaotf6m"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/PlayerController.gd" id="1_6ri7o"]
 [ext_resource type="PackedScene" uid="uid://2xwi8txxjfjn" path="res://Assets/Scenes/PlayerSprite.tscn" id="1_piqim"]
+[ext_resource type="PackedScene" uid="uid://cwilw8yh3bdfd" path="res://Assets/Scenes/GameOverMenu.tscn" id="3_5qwxn"]
 [ext_resource type="PackedScene" uid="uid://b4kdkamccmyvd" path="res://Assets/Scenes/Aim.tscn" id="3_ei8ae"]
 [ext_resource type="Texture2D" uid="uid://dq25dp1rr0og4" path="res://Assets/Art/UI/Buttons/Button_Hover_3Slides.png" id="4_4flvv"]
 
@@ -42,6 +43,19 @@ unique_name_in_owner = true
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(1, 0)
 position_smoothing_enabled = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Camera2D"]
+
+[node name="GameOverMenu" parent="Camera2D/CanvasLayer" instance=ExtResource("3_5qwxn")]
+unique_name_in_owner = true
+visible = false
+top_level = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+size_flags_horizontal = 4
 
 [node name="Aim" parent="." instance=ExtResource("3_ei8ae")]
 

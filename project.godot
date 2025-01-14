@@ -23,6 +23,11 @@ window/stretch/mode="viewport"
 
 project/assembly_name="Vanier2025GodotWS"
 
+[editor]
+
+movie_writer/movie_file="/Users/stevenlee/Documents/GitHub/Workshop-Dingo-Godot-2025/workshop-demo.avi"
+movie_writer/main_scene="res://Assets/Scenes/MainMenu.tscn"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/anthonyec.camera_preview/plugin.cfg")

@@ -136,7 +136,7 @@ shape = SubResource("CircleShape2D_78dnn")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_6lsed")
-frame_progress = 0.438218
+frame_progress = 0.2412
 
 [node name="Audio" type="AudioStreamPlayer2D" parent="."]
 unique_name_in_owner = true

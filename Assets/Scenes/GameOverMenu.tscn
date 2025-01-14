@@ -1,0 +1,91 @@
+[gd_scene load_steps=6 format=3 uid="uid://cwilw8yh3bdfd"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/GameOver.gd" id="1_cwly7"]
+[ext_resource type="Texture2D" uid="uid://sja6wk7eu6u6" path="res://Assets/Art/UI/KenneyUI/button_square_gradient.png" id="1_f6abh"]
+[ext_resource type="Texture2D" uid="uid://0ys8q5giv6k7" path="res://Assets/Art/UI/KenneyUI/icon_play_outline.png" id="3_ccq6q"]
+[ext_resource type="Texture2D" uid="uid://bp62vdl1mekp5" path="res://Assets/Art/UI/KenneyUI/icon_repeat_outline.png" id="4_l60ns"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_brh0g"]
+texture = ExtResource("1_f6abh")
+texture_margin_left = 40.0
+texture_margin_top = 70.0
+texture_margin_right = 40.0
+texture_margin_bottom = 40.0
+expand_margin_left = 120.0
+expand_margin_top = 110.0
+expand_margin_right = 120.0
+expand_margin_bottom = 20.0
+
+[node name="GameOverMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cwly7")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -99.0
+offset_top = -145.0
+offset_right = 99.0
+offset_bottom = 145.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_brh0g")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 110
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = -40
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="GameOver" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Game Over!"
+horizontal_alignment = 1
+
+[node name="HighScore" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "High Score: 999999"
+horizontal_alignment = 1
+justification_flags = 131
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_constants/separation = 40
+
+[node name="GoMain" type="TextureButton" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+texture_normal = ExtResource("3_ccq6q")
+
+[node name="RestartGame" type="TextureButton" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+texture_normal = ExtResource("4_l60ns")
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/GoMain" to="." method="_on_go_main_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/RestartGame" to="." method="_on_restart_game_pressed"]

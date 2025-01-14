@@ -6,11 +6,14 @@ extends CharacterBody2D
 @export var enemySprite = Node2D
 @export var health = 3
 @export var damage = 20.0
+@export var scoreValue = 10
 
 @export_group("states")
 @export var isHurt = false
 @export var isDead = false
 @export var isAttacking = false
+
+signal increasePlayerScore(scoreValue: int)
 
 #preload the smoke and instatiate smoke
 
@@ -35,6 +38,7 @@ func FlipSprite():
 
 func take_damage():
 	if health == 0:
+		emit_signal("increasePlayerScore", scoreValue)
 		isDead = true
 		%Audio.play()
 		enemySprite.PlayDeadAnimation()

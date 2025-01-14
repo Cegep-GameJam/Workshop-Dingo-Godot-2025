@@ -8,6 +8,7 @@ extends CharacterBody2D
 @export_group("challenge")
 #Challenge: Create a reload mechanic
 @export var isReloading: bool = false
+@export var score = 0
 
 signal GameOver
 
@@ -40,8 +41,11 @@ func CheckHurtBox():
 				playerSprite.PlayDeadAnimation()
 				await playerSprite.getAnimator().animation_finished
 				playerSprite.visible = false
-				# emit our custom signal flag
-				GameOver.emit()
+				
+				# Show GameOver
+				%GameOverMenu.UpdateScore(score)
+				%GameOverMenu.visible = true
+
 
 func _ready():
 	print_debug("hello world!")
@@ -63,6 +67,8 @@ func CheckDirection(dir) -> void:
 		%PlayerSprite.flip_h = true
 	if directionInput > 0:
 		%PlayerSprite.flip_h = false
-	
 
+func _on_increasePlayerScore(scoreValue):
+	score += scoreValue
+	print_debug("Player score: ",score)
 	

@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://oxy5tfaotf6m"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/PlayerController.gd" id="1_6ri7o"]
+[ext_resource type="PackedScene" uid="uid://2xwi8txxjfjn" path="res://Assets/Scenes/PlayerSprite.tscn" id="1_piqim"]
+[ext_resource type="PackedScene" uid="uid://b4kdkamccmyvd" path="res://Assets/Scenes/Aim.tscn" id="3_ei8ae"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v6q21"]
+radius = 25.0
+height = 64.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_f44id"]
+radius = 22.0227
+
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("playerSprite")]
+script = ExtResource("1_6ri7o")
+playerSprite = NodePath("PlayerSprite")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 5)
+shape = SubResource("CapsuleShape2D_v6q21")
+
+[node name="PlayerSprite" parent="." instance=ExtResource("1_piqim")]
+unique_name_in_owner = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1, 0)
+position_smoothing_enabled = true
+
+[node name="Aim" parent="." instance=ExtResource("3_ei8ae")]
+
+[node name="DamageBox" type="Area2D" parent="."]
+unique_name_in_owner = true
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageBox"]
+shape = SubResource("CircleShape2D_f44id")
+debug_color = Color(0.890319, 0.25588, 0.516241, 0.42)

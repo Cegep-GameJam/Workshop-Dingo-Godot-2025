@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cqmpsvperkxpp"
-path="res://.godot/imported/Rocks_02.png-60a876b202f7e410fd919e5a9b9c43b4.ctex"
+uid="uid://dx6s4l4n13eff"
+path="res://.godot/imported/Foam.png-b1ed77a69e25cea49b0b15bdf9999a48.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Tilemaps/Rocks_02.png"
-dest_files=["res://.godot/imported/Rocks_02.png-60a876b202f7e410fd919e5a9b9c43b4.ctex"]
+source_file="res://Assets/Art/Tilemaps/Foam.png"
+dest_files=["res://.godot/imported/Foam.png-b1ed77a69e25cea49b0b15bdf9999a48.ctex"]
 
 [params]
 

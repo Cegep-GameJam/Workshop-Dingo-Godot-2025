@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bxolr3q0af6xe"
+path="res://.godot/imported/Waiting.ogg-636100dc3de62e7d7911e929352f1795.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Audio/16-Bit Starter Pack/Waiting.ogg"
+dest_files=["res://.godot/imported/Waiting.ogg-636100dc3de62e7d7911e929352f1795.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

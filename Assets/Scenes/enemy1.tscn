@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://24sxb18vx53i"]
+
+[ext_resource type="Script" path="res://Assets/Scenes/EnemyKnightController.gd" id="1_ir2qj"]
+[ext_resource type="PackedScene" uid="uid://ngxfufo5rglu" path="res://Assets/Scenes/enemy_visuals.tscn" id="1_prh4v"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5k3y8"]
+radius = 76.3217
+
+[node name="Enemy1" type="CharacterBody2D" node_paths=PackedStringArray("enemySprite")]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_ir2qj")
+enemySprite = NodePath("EnemyVisuals")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_5k3y8")
+
+[node name="EnemyVisuals" parent="." instance=ExtResource("1_prh4v")]

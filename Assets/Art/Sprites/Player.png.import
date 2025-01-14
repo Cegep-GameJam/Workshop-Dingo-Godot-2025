@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2ty8fqdohshi"
-path="res://.godot/imported/Rocks_04.png-0938f7668ff9fc9cb7010c14a6e96220.ctex"
+uid="uid://di5435aospdwm"
+path="res://.godot/imported/Player.png-9633830412328c33a8d3a50d8dbc9fd4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Tilemaps/Rocks_04.png"
-dest_files=["res://.godot/imported/Rocks_04.png-0938f7668ff9fc9cb7010c14a6e96220.ctex"]
+source_file="res://Assets/Art/Sprites/Player.png"
+dest_files=["res://.godot/imported/Player.png-9633830412328c33a8d3a50d8dbc9fd4.ctex"]
 
 [params]
 

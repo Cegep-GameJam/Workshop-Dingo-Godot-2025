@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://3yxfwndtvsdp"]
+
+[ext_resource type="Texture2D" uid="uid://c1h8kga30ohd5" path="res://Assets/Art/Sprites/Castle_Red.png" id="1_twsmk"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_heykp"]
+radius = 92.9596
+height = 276.016
+
+[node name="CastleProp2" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_twsmk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 12)
+rotation = 1.5757
+shape = SubResource("CapsuleShape2D_heykp")

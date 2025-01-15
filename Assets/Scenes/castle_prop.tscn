@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnuq8m3aa2hak"]
+
+[ext_resource type="Texture2D" uid="uid://bx0il4pyrem8f" path="res://Assets/Art/Sprites/Tower_Blue.png" id="1_gyagg"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fhfis"]
+radius = 42.0
+height = 160.0
+
+[node name="CastleProp" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_gyagg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 12)
+shape = SubResource("CapsuleShape2D_fhfis")

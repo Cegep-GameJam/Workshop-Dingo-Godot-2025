@@ -20,6 +20,7 @@ position = Vector2(101, 0)
 
 [node name="AimDirection" type="Sprite2D" parent="Area2D"]
 unique_name_in_owner = true
+z_index = 2
 position = Vector2(101, 0)
 rotation = -4.12133
 texture = ExtResource("2_o8bwg")

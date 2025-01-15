@@ -43,12 +43,22 @@ func CheckHurtBox():
 				playerSprite.visible = false
 				
 				# Show GameOver
+				Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 				%GameOverMenu.UpdateScore(score)
 				%GameOverMenu.visible = true
 
 
 func _ready():
 	print_debug("hello world!")
+
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("left_click"):
+		Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
+		# escape key pressed
+	if event.is_action_pressed("ui_cancel"):
+		# releases cursor allowing the player to move 
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	
 
 func _physics_process(delta):

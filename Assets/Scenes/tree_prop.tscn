@@ -1,0 +1,72 @@
+[gd_scene load_steps=10 format=3 uid="uid://bc50qi1072iyd"]
+
+[ext_resource type="Texture2D" uid="uid://dds5j84uh3es8" path="res://Assets/Art/Sprites/Tree.png" id="1_ni6bg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2houf"]
+atlas = ExtResource("1_ni6bg")
+region = Rect2(0, 384, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t5e28"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2houf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ldn5"]
+atlas = ExtResource("1_ni6bg")
+region = Rect2(0, 6, 192, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_efs3a"]
+atlas = ExtResource("1_ni6bg")
+region = Rect2(192, 6, 192, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rpt7t"]
+atlas = ExtResource("1_ni6bg")
+region = Rect2(384, 6, 192, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cv1ih"]
+atlas = ExtResource("1_ni6bg")
+region = Rect2(576, 6, 192, 150)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ni7ia"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ldn5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_efs3a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rpt7t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cv1ih")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pjodx"]
+radius = 20.025
+
+[node name="TreeProp" type="StaticBody2D"]
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_t5e28")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 1
+position = Vector2(0, -15)
+sprite_frames = SubResource("SpriteFrames_ni7ia")
+frame_progress = 0.00557275
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 58)
+shape = SubResource("CircleShape2D_pjodx")

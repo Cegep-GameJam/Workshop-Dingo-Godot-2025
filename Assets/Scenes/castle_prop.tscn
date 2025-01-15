@@ -4,13 +4,16 @@
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fhfis"]
 radius = 42.0
-height = 160.0
+height = 104.0
 
 [node name="CastleProp" type="StaticBody2D"]
+light_mask = 9
+visibility_layer = 9
+z_index = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_gyagg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 12)
+position = Vector2(1, 39)
 shape = SubResource("CapsuleShape2D_fhfis")
